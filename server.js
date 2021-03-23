@@ -13,6 +13,7 @@ app.use(compression());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+// add static as first parameter if you want a get route for starting html page
 app.use(express.static("public"));
 
 mongoose.connect("mongodb://localhost/budget", {
